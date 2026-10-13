@@ -1,10 +1,5 @@
 # 🎯 Student-Job Skill Match Analyzer
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Paradigm](https://img.shields.io/badge/paradigm-Object--Oriented%20Programming-brightgreen.svg)](#-object-oriented-programming-oop-principles)
-[![Stage](https://img.shields.io/badge/stage-1%20completed-success.svg)](#-roadmap--future-enhancements)
-[![License](https://img.shields.io/badge/license-MIT-informational.svg)](#)
-
 An Object-Oriented Python application that performs skill-gap analysis by comparing candidate skills with job requirements. It evaluates compatibility, calculates a percentage-based match score, identifies missing competencies, and outputs structured analytical reports.
 
 ---
@@ -44,12 +39,12 @@ The system normalizes skill inputs, applies polymorphic analyzers (for score cal
 
 This project serves as a practical demonstration of the 4 core pillars of OOP:
 
-| Principle | Implementation in Project |
-| :--- | :--- |
-| **Encapsulation** | `StudentProfile` and `JobDescription` protect internal attributes (`__skills`, `__student`, `__req_skills`) via private naming conventions, exposing safe access through getter methods. |
-| **Abstraction** | `SkillAnalyzer` in `analyzers.py` inherits from `abc.ABC` and defines the abstract contract `@abstractmethod def analyze()`, hiding specific implementation details behind a clean interface. |
-| **Inheritance** | Concrete classes `MatchScoreCalculator` and `MissingSkillDetector` inherit from the base `SkillAnalyzer` class. |
-| **Polymorphism** | Both analyzers implement their own version of `.analyze(student, job)`. The `Manager` iterates over different analyzer objects uniformly without needing conditional logic for each. |
+| Principle         | Implementation in Project                                                                                                                                                                     |
+| :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Encapsulation** | `StudentProfile` and `JobDescription` protect internal attributes (`__skills`, `__student`, `__req_skills`) via private naming conventions, exposing safe access through getter methods.      |
+| **Abstraction**   | `SkillAnalyzer` in `analyzers.py` inherits from `abc.ABC` and defines the abstract contract `@abstractmethod def analyze()`, hiding specific implementation details behind a clean interface. |
+| **Inheritance**   | Concrete classes `MatchScoreCalculator` and `MissingSkillDetector` inherit from the base `SkillAnalyzer` class.                                                                               |
+| **Polymorphism**  | Both analyzers implement their own version of `.analyze(student, job)`. The `Manager` iterates over different analyzer objects uniformly without needing conditional logic for each.          |
 
 ---
 
@@ -85,6 +80,7 @@ mini_OOP_project/
 ### Installation & Execution
 
 1. Clone or navigate to the project directory:
+
    ```bash
    cd mini_OOP_project
    ```
@@ -148,16 +144,6 @@ Match Score: 40%
 Explanation:
 The student matches 2 out of 5 skills.Therefore, the skill match percentage is 40%
 ```
-
----
-
-## 🔮 Roadmap / Future Enhancements
-
-- [x] **Stage 1 (Completed):** Core data models, abstract analyzer architecture, match score calculator, missing skill detector, and terminal report manager.
-- [ ] **Stage 2:** Interactive CLI prompt allowing users to enter custom students and jobs dynamically.
-- [ ] **Stage 3:** Skill weightage (e.g., distinguishing between "Must-Have" vs "Good-to-Have" skills).
-- [ ] **Stage 4:** Export reports to JSON or PDF format.
-- [ ] **Stage 5:** Resume parser integration to automatically extract candidate skills.
 
 ---
 
